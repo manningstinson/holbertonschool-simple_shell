@@ -1,3 +1,5 @@
+# Enviroment
+
 In the context of a shell or shell script, the term "environment" refers to the collection of variables, settings, and information that define the behavior of the shell and influence the behavior of the programs it runs. The environment provides a way for programs to receive configuration details and for users to customize the behavior of the shell and its subprocesses.
 
 Key components of the environment include:

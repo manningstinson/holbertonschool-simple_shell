@@ -4,7 +4,8 @@ Certainly, here's the list without bullets in the descriptions:
 - `strcpy`, `strcat`, `strlen`, `strcmp`, `strncmp`, etc.
 
 **`access` (man 2 access):** <br>
-Checks real user's permissions for a file. Used to test the accessibility of a file, checking if the calling process can access the file in the specified mode.
+Checks real user's permissions for a file. 
+Used to test the accessibility of a file, checking if the calling process can access the file in the specified mode.
 
 **`chdir` (man 2 chdir):** <br>
 Changes the current working directory of the calling process.

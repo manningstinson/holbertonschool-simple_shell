@@ -48,7 +48,7 @@ Tests whether a file descriptor refers to a terminal.
 **`kill` (man 2 kill):** <br>
 Sends a signal to a process or a group of processes.
 
-**m`alloc` (man 3 malloc):** <br>
+**`malloc` (man 3 malloc):** <br>
 Allocates a specified number of bytes of memory.
 
 **`open` (man 2 open):** <br>
@@ -66,7 +66,7 @@ Prints formatted output to stdout.
 **`fprintf` (man 3 fprintf):** <br>
 Prints formatted output to a specified file stream.
 
-**v`fprintf` (man 3 vfprintf):** <br>
+**`vfprintf` (man 3 vfprintf):** <br>
 Prints formatted output using a va_list.
 
 **`sprintf` (man 3 sprintf):** <br>

@@ -112,4 +112,3 @@ An older version of `waitpid` with four arguments.
 **`write` (man 2 write):** <br>
 Writes data to a file descriptor.
 
-These functions and system calls are fundamental for performing various operations related to file and process manipulation in a Unix-like environment.

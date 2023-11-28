@@ -3,7 +3,7 @@ Certainly, here's the list without bullets in the descriptions:
 **Functions from string.h:** <br>
 - `strcpy`, `strcat`, `strlen`, `strcmp`, `strncmp`, etc.
 
-**access (man 2 access):** <br>
+**`access` (man 2 access):** <br>
 Checks real user's permissions for a file. Used to test the accessibility of a file, checking if the calling process can access the file in the specified mode.
 
 **`chdir` (man 2 chdir):** <br>

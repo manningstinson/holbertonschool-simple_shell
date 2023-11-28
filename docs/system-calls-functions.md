@@ -1,4 +1,6 @@
 # System Calls & Functions
+These functions and system calls are fundamental for performing various operations related to file and process manipulation in a Unix-like environment.
+
 
 **Functions from string.h:**
 - `strcpy`, `strcat`, `strlen`, `strcmp`, `strncmp`, etc.
@@ -110,5 +112,3 @@ An older version of `waitpid` with four arguments.
 
 **`write` (man 2 write):**
 Writes data to a file descriptor.
-
-These functions and system calls are fundamental for performing various operations related to file and process manipulation in a Unix-like environment.

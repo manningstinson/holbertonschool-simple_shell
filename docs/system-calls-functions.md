@@ -99,7 +99,7 @@ Breaks a string into a sequence of zero or more nonempty tokens.
 **`wait` (man 2 wait):**
 Waits for a child process to terminate.
 
-**w`aitpid` (man 2 waitpid):**
+**`waitpid` (man 2 waitpid):**
 Waits for a specific child process to terminate.
 
 **`wait3` (man 2 wait3):**

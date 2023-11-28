@@ -4,16 +4,16 @@ In the context of a shell or shell script, the term "environment" refers to the 
 
 Key components of the environment include:
 
-1. **Environment Variables:** These are variables that are part of the environment and can be accessed by programs and scripts. Examples include `PATH` (which defines the directories to search for executable files), `HOME` (which specifies the user's home directory), and `USER` (which holds the username).
+**Environment Variables:** These are variables that are part of the environment and can be accessed by programs and scripts. Examples include `PATH` (which defines the directories to search for executable files), `HOME` (which specifies the user's home directory), and `USER` (which holds the username).
 
-2. **Shell Variables:** These are variables specific to the shell itself. They can affect the shell's behavior, and they can be set and modified by the user.
+**Shell Variables:** These are variables specific to the shell itself. They can affect the shell's behavior, and they can be set and modified by the user.
 
-3. **Current Working Directory:** The directory in the file system where the shell is currently "located." This is important for relative path resolution and executing commands.
+**Current Working Directory:** The directory in the file system where the shell is currently "located." This is important for relative path resolution and executing commands.
 
-4. **File Descriptors:** Information about open files and how input and output are managed. For example, standard input (`stdin`), standard output (`stdout`), and standard error (`stderr`) are part of the environment.
+**File Descriptors:** Information about open files and how input and output are managed. For example, standard input (`stdin`), standard output (`stdout`), and standard error (`stderr`) are part of the environment.
 
-5. **Locale Settings:** Settings that define the language, character encoding, and cultural conventions for the user and the programs they run.
+**Locale Settings:** Settings that define the language, character encoding, and cultural conventions for the user and the programs they run.
 
-6. **Other Configuration Settings:** Various other settings and configurations that influence the behavior of the shell and programs.
+**Other Configuration Settings:** Various other settings and configurations that influence the behavior of the shell and programs.
 
 When a new process is created (for example, when a command is executed in a shell), it inherits the environment of its parent process (unless explicitly modified). The environment is crucial for providing context and information to programs as they execute. In shell scripting, you can manipulate environment variables and use them to control the behavior of your scripts or pass information to subprocesses.

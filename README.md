@@ -12,7 +12,7 @@ Built-in commands in a shell are commands that are directly recognized and execu
 **`unset`:** Removes environment variables.<br><br>
 **`set`:** Displays shell variables and their values.<br><br>
 **`unset`:** Removes a shell variable.<br><br>
-**`source` or `.` (dot):** Executes commands from a file in the current shell session, usually used for shell script execution.<br>
+**`source` or `.` (dot):** Executes commands from a file in the current shell session, usually used for shell script execution.<br><br>
 **`history`:** Displays or manages the command history list.<br><br>
 **`jobs`:** Displays the status of jobs running in the background.<br><br>
 **`bg` and `fg`:** Controls background and foreground jobs.<br><br>

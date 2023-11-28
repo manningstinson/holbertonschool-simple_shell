@@ -1,4 +1,4 @@
-Certainly, here's the list without bullets in the descriptions:
+# System Calls & Functions
 
 **Functions from string.h:** <br>
 - `strcpy`, `strcat`, `strlen`, `strcmp`, `strncmp`, etc.

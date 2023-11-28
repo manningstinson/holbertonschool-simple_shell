@@ -7,7 +7,7 @@ In a shell program, the term "built-in" typically refers to commands that are im
 
 Built-in commands in a shell are commands that are directly recognized and executed by the shell itself, without invoking an external program. The set of built-in commands can vary between different shell implementations. In addition to "cd," "exit," "echo," and "pwd," which you mentioned, here are a few more common built-in commands:
 
-**`alias`:** Allows users to create aliases for commands, as discussed earlier. <br>
+**`alias`:** Allows users to create aliases for commands, as discussed earlier. <br> <br>
 **`export`:** Sets environment variables or displays a list of environment variables.<br><br>
 **`unset`:** Removes environment variables.<br><br>
 **`set`:** Displays shell variables and their values.<br><br>

@@ -3,8 +3,6 @@ Here's a breakdown of the given shell execution process in a flowchart format. I
 
 <img width="1417" alt="Screen Shot 2023-12-02 at 3 32 26 PM" src="https://github.com/manningstinson/holbertonschool-simple_shell/assets/104523090/376d3a32-bbf8-479d-948e-017701f6a812">
 
-# Shell Operation Workflow
-
 ### Shell Awaits User Input
 The process initiates as the shell awaits user input.
 

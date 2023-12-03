@@ -18,8 +18,6 @@ If the input matches a built-in command, execute it, advancing the process.
 ## Is it an Executable File?
 The second decision point examines whether the user input is an executable file.
 
-Certainly! Here's the provided information formatted in Markdown with heading levels:
-
 #### Child Process Execution
 The child process, created by forking, is responsible for executing the external command.
 

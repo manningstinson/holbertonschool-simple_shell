@@ -84,3 +84,28 @@ Following subshell completion, the parent process resumes execution, handling th
 **Shell Continues Execution Flow**<br>
 The shell seamlessly resumes its regular execution flow, potentially processing additional user commands or instructions. The newly created subprocess commences the execution of commands specified in the subshell.
 
+## If User Doesn't Interrupt
+
+**Error Detection** <br>
+The shell detects an error during the execution of a command. Errors can occur for various reasons, such as a command not being found, permission issues, syntax errors, etc.
+
+**Error Handling** <br>
+The shell performs error handling to manage the encountered issue. This may involve displaying an error message to the user, logging the error for further analysis, or taking corrective actions if possible.
+
+**Error Message to User** <br>
+The shell often displays an error message to inform the user about the nature of the problem. The message might include details about the error, such as the command that failed and a description of the issue.
+
+**Error Exit Status** <br>
+The command that encountered the error typically exits with a non-zero exit status to indicate that an issue occurred. The specific exit status code may provide additional information about the type of error.
+
+**Parent Process (Shell) Handling** <br>
+The parent process (the main shell) checks the exit status of the command to determine whether it completed successfully or encountered an error. If the exit status indicates an error, the shell may take appropriate actions.
+
+**Continuation or Termination** <br>
+Depending on the nature of the error and the shell's configuration, the shell may decide whether to continue or terminate further execution. Some shells have options to continue executing subsequent commands even if one command encounters an error (using constructs like && or ||), while others may terminate the script or interactive session on the first error.
+
+**User Interaction** <br>
+The shell may prompt the user for additional input or instructions, depending on the severity and type of the error. This could involve asking the user to provide corrected input or making decisions on how to proceed.
+
+**Logging and Debugging** <br>
+The shell may log information about the encountered error for debugging purposes. This information could be useful for diagnosing issues and improving the overall reliability of the shell.

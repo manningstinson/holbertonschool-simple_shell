@@ -15,7 +15,7 @@ The initial decision point involves determining if the user input corresponds to
 #### Execute Built-in Command
 If the input matches a built-in command, execute it, advancing the process.
 
-#### Is it an Executable File?
+## Is it an Executable File?
 The second decision point examines whether the user input is an executable file.
 
 #### Fork and Execute the Command

@@ -9,7 +9,7 @@ The process initiates as the shell awaits user input.
 ### Tokenize and Parse User Input
 User input undergoes tokenization and parsing for further processing.
 
-#### Is it a Built-in Command?
+## Is it a Built-in Command?
 The initial decision point involves determining if the user input corresponds to a built-in command.
 
 #### Execute Built-in Command

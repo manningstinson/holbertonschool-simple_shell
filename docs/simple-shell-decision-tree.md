@@ -5,11 +5,14 @@ Below is a decision tree/diagream of the simple shell command process with error
 
 # General Flow
 
-### Shell Awaits User Input: The process starts with the shell waiting for user input. <br>
+### Shell Awaits User Input: 
+The process starts with the shell waiting for user input. <br>
 
-### Tokenize and Parse User Input: The user input is processed by tokenizing and parsing. <br>
+### Tokenize and Parse User Input: 
+The user input is processed by tokenizing and parsing. <br>
 
-### Is it a Built-in Command?: The first decision point. If the user input corresponds to a built-in command, execute it; otherwise, proceed to the next check. <br>
+### Is it a Built-in Command?: The first decision point. 
+If the user input corresponds to a built-in command, execute it; otherwise, proceed to the next check. <br>
 
 Execute Built-in Command: If it's a built-in command, execute it. The process continues.
 Is it an Executable File?: The second decision point. If the user input is an executable file, fork and execute it; otherwise, move on to the next check.

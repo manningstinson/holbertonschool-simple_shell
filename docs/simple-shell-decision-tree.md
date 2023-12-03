@@ -3,7 +3,7 @@
 # Simple Shell Process Flow
 Here's a breakdown of the given shell execution process in a flowchart format. Included are flows for error handing, non built in commands, and subshell commands. 
 
-### Shell Awaits User Input
+**Shell Awaits User Input
 The process initiates as the shell awaits user input.
 
 ### Tokenize and Parse User Input

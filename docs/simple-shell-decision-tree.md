@@ -27,7 +27,7 @@ The third decision point assesses if the user input represents a directory.
 ### Change to the Directory
 If the input denotes a directory, change to it to continue the process.
 
-#### Is it a Subshell Command?
+### Is it a Subshell Command?
 The fourth decision point involves identifying if the user input is a subshell command.
 
 ### Fork and Execute Subshell Command
@@ -38,3 +38,6 @@ The fifth decision point involves checking again if the user input is a subshell
 
 ### Fork and Execute Subshell Command
 For subshell commands, fork and execute them, ensuring the process moves forward.
+
+## Process Flow for Non-Built Commands
+

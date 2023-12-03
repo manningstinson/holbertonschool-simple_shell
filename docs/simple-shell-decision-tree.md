@@ -12,7 +12,7 @@ User input undergoes tokenization and parsing for further processing.
 **Is it a Built-in Command** <br>
 The initial decision point involves determining if the user input corresponds to a built-in command.
 
-**Execute Built-in Command?** <br>
+**Execute Built-in Command** <br>
 If the input matches a built-in command, execute it, advancing the process.
 
 ## Is it an Executable File?

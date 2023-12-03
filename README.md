@@ -85,7 +85,9 @@ int handle_cd_error(char *path) {
 ```
 Sure, let's break down this additional code with explanations in each step:
 
-### Step 1: Include Header
+# Bultin2 (builtin2.c)
+
+### Include Header
 
 ```c
 #include "builtin2.h"
@@ -93,7 +95,7 @@ Sure, let's break down this additional code with explanations in each step:
 
 This step includes the header file "builtin2.h," presumably containing necessary declarations and structures for the shell's built-in functionalities.
 
-### Step 2: Implement `shell_history`
+### Implement `shell_history`
 
 ```c
 int shell_history(char **args)
@@ -114,7 +116,7 @@ int shell_history(char **args)
 
 The `shell_history` function displays the command history stored in a linked list (`history_list`). It prints each command along with a count.
 
-### Step 3: Implement `unset_shell_alias`
+### Implement `unset_shell_alias`
 
 ```c
 int unset_shell_alias(char **args)
@@ -161,7 +163,7 @@ int unset_shell_alias(char **args)
 
 The `unset_shell_alias` function removes an alias from the linked list (`alias_list`). It searches for the alias and frees the associated memory.
 
-### Step 4: Implement `set_shell_alias`
+### Implement `set_shell_alias`
 
 ```c
 int set_shell_alias(char **args)
@@ -191,7 +193,7 @@ int set_shell_alias(char **args)
 
 The `set_shell_alias` function sets a new alias. It creates a new `AliasNode`, assigns the alias and command, and adds it to the beginning of the linked list.
 
-### Step 5: Implement `print_shell_alias`
+### Implement `print_shell_alias`
 
 ```c
 int print_shell_alias(void)

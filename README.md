@@ -83,7 +83,6 @@ int handle_cd_error(char *path) {
     return -1;
 }
 ```
-Sure, let's break down this additional code with explanations in each step:
 
 # Bultin2 (builtin2.c)
 

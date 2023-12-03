@@ -1,7 +1,7 @@
 # Builtins
 README for builtin commands.  We were only allowed five functions per file, so the built-in commands were broken up into two files which include builtins1.c, and builtins2.c. 
 
-## Builtins 1
+## Builtins 1 (builtins1.c)
 
 ### Include Necessary Headers
 
@@ -85,11 +85,5 @@ int handle_cd_error(char *path) {
 ```
 
 The `handle_cd_error` function prints an error message using `perror` for the `cd` command.
-
-### Additional Note
-
-- The `main` function (not provided) is assumed to exist and should handle the overall execution of the shell.
-
-Feel free to structure your README accordingly, elaborating on each step and providing more details as needed.
 
 

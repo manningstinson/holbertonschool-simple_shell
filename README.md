@@ -1,10 +1,7 @@
 # Builtins
 README for builtin commands.  We were only allowed five functions per file, so the built-in commands were broken up into two files which include builtins1.c, and builtins2.c. 
 
-## Builtins1
-Certainly! Here's a breakdown of the provided code in steps with explanations in code blocks:
-
-### Step 1: Include Necessary Headers
+### Include Necessary Headers
 
 ```c
 #include "shell.h"
@@ -16,7 +13,7 @@ Certainly! Here's a breakdown of the provided code in steps with explanations in
 
 This step includes the required headers for the shell program, including standard input/output functions (`stdio.h`), memory allocation functions (`stdlib.h`), string manipulation functions (`string.h`), and system-related functions (`unistd.h`).
 
-### Step 2: Define Shell Built-in Commands
+### Define Shell Built-in Commands
 
 ```c
 int shell_exit(void) { /* ... */ }
@@ -32,7 +29,7 @@ These functions define the built-in commands for the shell:
 - `shell_help`: Displays information about built-in commands.
 - `handle_cd_error`: Handles errors for the `cd` command.
 
-### Step 3: Implement `shell_exit`
+### Implement `shell_exit`
 
 ```c
 int shell_exit(void) {
@@ -42,7 +39,7 @@ int shell_exit(void) {
 
 The `shell_exit` function simply exits the shell with a success status.
 
-### Step 4: Implement `shell_cd`
+### Implement `shell_cd`
 
 ```c
 int shell_cd(char **args) {
@@ -60,7 +57,7 @@ int shell_cd(char **args) {
 
 The `shell_cd` function changes the current working directory. If no directory is provided as an argument, it prints an error message. If changing the directory fails, it calls `handle_cd_error`.
 
-### Step 5: Implement `shell_help`
+### Implement `shell_help`
 
 ```c
 int shell_help(void) {
@@ -76,7 +73,7 @@ int shell_help(void) {
 
 The `shell_help` function displays information about built-in commands.
 
-### Step 6: Implement `handle_cd_error`
+### Implement `handle_cd_error`
 
 ```c
 int handle_cd_error(char *path) {

@@ -1,18 +1,18 @@
 <img width="1417" alt="Screen Shot 2023-12-02 at 3 32 26 PM" src="https://github.com/manningstinson/holbertonschool-simple_shell/assets/104523090/376d3a32-bbf8-479d-948e-017701f6a812">
 
 # Simple Shell Process Flow
-Here's a breakdown of the given shell execution process in a flowchart format. Included are flows for error handing, non built in commands, and subshell commands. 
+Here's a breakdown of the given shell execution process in a flowchart format. Included are flows for error handing, non built in commands, and subshell commands.  
 
-**Shell Awaits User Input**
+**Shell Awaits User Input** <br>
 The process initiates as the shell awaits user input.
 
-**Tokenize and Parse User Input**
+**Tokenize and Parse User Input** <br>
 User input undergoes tokenization and parsing for further processing.
 
-**Is it a Built-in Command**
+**Is it a Built-in Command** <br>
 The initial decision point involves determining if the user input corresponds to a built-in command.
 
-**Execute Built-in Command**
+**Execute Built-in Command** <br>
 If the input matches a built-in command, execute it, advancing the process.
 
 ## Is it an Executable File?

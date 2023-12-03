@@ -54,5 +54,61 @@ If the input denotes a directory, change to it to continue the process.
 ## Is it a Subshell Command?
 The fourth decision point involves identifying if the user input is a subshell command.
 
-**Fork and Execute Subshell Command** <br>
-For subshell commands, fork and execute them, ensuring the process moves forward.
+# Subshell Execution Process
+The subshell command initiates a subprocess dedicated to executing a series of commands within a confined environment. Here's a step-by-step breakdown:
+
+**Shell Forks Subshell Process** <br>
+1. The shell invokes a new subprocess (subshell) through the fork system call.
+
+**Subshell Command Execution** # Subshell Execution Process
+
+This README outlines the process that unfolds when the shell forks and executes a subshell command. The subshell command initiates a subprocess dedicated to executing a series of commands within a confined environment. Here's a step-by-step breakdown:
+
+## Shell Forks Subshell Process
+1. The shell invokes a new subprocess (subshell) through the fork system call.
+
+## Subshell Command Execution
+2. The newly created subprocess commences the execution of commands specified in the subshell.
+
+## Command Execution in Subshell
+3. The subshell rigorously executes the provided series of commands within its isolated environment.
+
+## Subshell Command Completion
+4. The subshell finalizes the execution of all commands within its designated environment.
+
+## Subshell Process Termination
+5. The subprocess (subshell) concludes its execution after successfully running all the specified commands.
+
+## Subshell Exit Status
+6. The subshell may exit with a status code, indicating the success or failure of the commands within.
+
+## Parent Process Handling
+7. The parent process (main shell) examines the exit status of the subshell to ascertain the success of its commands.
+
+## Parent Process Continues
+8. Following subshell completion, the parent process resumes execution, handling the exit status, performing error handling, or proceeding with subsequent steps.
+
+## Shell Continues Execution Flow
+9. The shell seamlessly resumes its regular execution flow, potentially processing additional user commands or instructions.
+2. The newly created subprocess commences the execution of commands specified in the subshell.
+
+## Command Execution in Subshell
+3. The subshell rigorously executes the provided series of commands within its isolated environment.
+
+## Subshell Command Completion
+4. The subshell finalizes the execution of all commands within its designated environment.
+
+## Subshell Process Termination
+5. The subprocess (subshell) concludes its execution after successfully running all the specified commands.
+
+## Subshell Exit Status
+6. The subshell may exit with a status code, indicating the success or failure of the commands within.
+
+## Parent Process Handling
+7. The parent process (main shell) examines the exit status of the subshell to ascertain the success of its commands.
+
+## Parent Process Continues
+8. Following subshell completion, the parent process resumes execution, handling the exit status, performing error handling, or proceeding with subsequent steps.
+
+## Shell Continues Execution Flow
+9. The shell seamlessly resumes its regular execution flow, potentially processing additional user commands or instructions.

@@ -84,7 +84,7 @@ int handle_cd_error(char *path) {
 }
 ```
 
-# Bultin2 (builtin2.c)
+## Bultin2 (builtin2.c)
 
 ### Include Header
 

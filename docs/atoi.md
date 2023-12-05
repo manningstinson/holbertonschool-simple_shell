@@ -1,4 +1,5 @@
 # ATOI
+The provided Bash script contributes to a simple shell implementation by offering essential functions. The `interactive()` function determines whether the shell is ready for user input by checking its connection to a terminal. Additionally, functions like `is_delim()` and `_isalpha()` assist in parsing and validating command parameters, while `_atoi()` facilitates the conversion of numerical input from strings to integers. Together, these functions enhance the basic functionality of a shell by providing tools for interactive mode detection, character checks, and string-to-integer conversion.
 
 ```bash
 # Function to check if shell is in interactive mode

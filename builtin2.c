@@ -178,4 +178,3 @@ char *find_command_in_path(const char *command, const char *path)
     free(path_copy);
     return NULL;
 }
->>>>>>> 71a71296560e44069bfee6e162c3b5ac79849554

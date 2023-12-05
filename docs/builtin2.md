@@ -1,4 +1,6 @@
 # Builtin 2 (builtin2.c)
+This C code extends a simple shell with functions to manage aliases, check command executability, and search for commands in the PATH. It provides essential utilities for manipulating strings and memory, enhancing the shell's capabilities.
+
 ```c
 #include "shell.h"
 #include <stdio.h>

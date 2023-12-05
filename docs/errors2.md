@@ -1,6 +1,6 @@
 # Errors 2 (errors2.md)
 
-Certainly! Let's break down the provided C code into code blocks and explain each part in the context of a simple shell.
+The C code provides essential utility functions for a simple shell, including string-to-integer conversion, error message display, and string manipulation. Notable functions include `convertStringToInt` for safe string-to-integer conversion, `displayError` for constructing and printing error messages, and string manipulation functions like `replaceFirstHash`. These utilities enhance the shell's capabilities in handling errors, numeric conversions, and string operations during runtime.
 
 ```c
 #include "shell.h"

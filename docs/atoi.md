@@ -1,4 +1,4 @@
-Certainly! Let's break down the provided Bash script into code blocks and explain each part.
+# ATOI
 
 ```bash
 #!/bin/bash

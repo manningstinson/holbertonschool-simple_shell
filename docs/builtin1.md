@@ -1,4 +1,6 @@
 # BuiltIn 1 (builtin1.c)
+This C code defines essential functions for a simple shell. The `execute_command` function serves as a placeholder for executing shell commands, while built-in commands like `shell_exit`, `shell_cd`, and `shell_help` handle exiting the shell, changing the directory, and displaying help information, respectively. The code also includes a utility function, `handle_cd_error`, to handle errors encountered during the `cd` command, displaying appropriate error messages.
+
 ```c
 #include "shell.h"
 #include <stdio.h>

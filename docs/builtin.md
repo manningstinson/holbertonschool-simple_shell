@@ -19,7 +19,7 @@ int _myexit(info_t *info)
 **Function Description:**
 The `_myexit` function exits the shell. If an argument is provided, it attempts to convert it to an integer as an exit status. If successful, it sets the exit status; otherwise, it prints an error message.
 
-###`_mycd(info_t *info)`
+### `_mycd(info_t *info)`
 ```c
 /**
  * _mycd - changes the current directory of the process

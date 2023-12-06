@@ -5,12 +5,15 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-/**
- * shell_loop - Main loop for the shell
- * @info: Pointer to the shell information struct
- */
+void shell_loop(info_t *info);
+void write_history(void);
+void read_history(void);
+int find_builtin(void);
+char *find_command_path(void);
+
 void shell_loop(info_t *info)
 {
+    ssize_t read_status;
     char *line;
     char **argv;
     int status;
@@ -18,8 +21,8 @@ void shell_loop(info_t *info)
     do
     {
         printf("$ ");
-        line = _getline(info);
-        if (line == NULL)
+        read_status = getline(&line, NULL, stdin);
+        if (read_status == -1 || line == NULL)
         {
             break;
         }
@@ -34,80 +37,58 @@ void shell_loop(info_t *info)
         status = execute_command(info, argv);
 
         custom_free_strings(argv);
-        bfree((void **)&line);
+        free(line);
 
     } while (status);
 }
 
-/**
- * write_history - Write history to a file
- * @info: Pointer to the shell information struct
- */
-void write_history(info_t *info)
+void write_history(void)
 {
-    // Implementation to write history to a file
-    // You can use info->history to access the history data
-    // and info->history_file to get the file name
+    /* Implementation to write history to a file
+     * You can use info->history to access the history data
+     * and info->history_file to get the file name
+     */
 }
 
-/**
- * read_history - Read history from a file
- * @info: Pointer to the shell information struct
- */
-void read_history(info_t *info)
+void read_history(void)
 {
-    // Implementation to read history from a file
-    // You can use info->history_file to get the file name
-    // and update info->history with the read data
+    /* Implementation to read history from a file
+     * You can use info->history_file to get the file name
+     * and update info->history with the read data
+     */
 }
 
-/**
- * find_builtin - Find and execute built-in commands
- * @info: Pointer to the shell information struct
- * @argv: Argument vector containing the command and its arguments
- * Return: 1 if the command is built-in, 0 otherwise
- */
-int find_builtin(info_t *info, char **argv)
+int find_builtin(void)
 {
-    // Implementation to find and execute built-in commands
-    // You can use info->builtins to check if a command is built-in
-    // and execute the corresponding function
+    /* Implementation to find and execute built-in commands
+     * You can use info->builtins to check if a command is built-in
+     * and execute the corresponding function
+     */
 
     return 0;
 }
 
-/**
- * find_command_path - Find the full path of a command
- * @info: Pointer to the shell information struct
- * @command: Command to find
- * Return: Full path of the command if found, NULL otherwise
- */
-char *find_command_path(info_t *info, const char *command)
+char *find_command_path(void)
 {
-    // Implementation to find the full path of a command
-    // You can use info->path to search for the command in the directories
+    /* Implementation to find the full path of a command
+     * You can use info->path to search for the command in the directories
+     */
 
     return NULL;
 }
 
-/**
- * execute_command - Fork and execute a command
- * @info: Pointer to the shell information struct
- * @argv: Argument vector containing the command and its arguments
- * Return: Status code of the executed command
- */
 int execute_command(info_t *info, char **argv)
 {
-    pid_t pid, wpid;
+    pid_t pid;
     int status;
 
-    if (find_builtin(info, argv))
+    if (find_builtin())
         return 1;
 
     pid = fork();
     if (pid == 0)
     {
-        // Child process
+        /* Child process */
         if (execve(argv[0], argv, info->env) == -1)
         {
             perror("hsh");
@@ -120,10 +101,10 @@ int execute_command(info_t *info, char **argv)
     }
     else
     {
-        // Parent process
+        /* Parent process */
         do
         {
-            wpid = waitpid(pid, &status, WUNTRACED);
+            waitpid(pid, &status, WUNTRACED);
         } while (!WIFEXITED(status) && !WIFSIGNALED(status));
     }
 

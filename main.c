@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <stdlib.h>
+
 /**
  * entry_point - Entry point of the shell program
  * @argument_count: Number of command-line arguments
@@ -49,7 +50,7 @@ int entry_point(int argument_count, char **argument_vector)
     read_history(shell_info);
 
     /* Launch the shell */
-    hsh(shell_info,argument_count, argument_vector);
+    shell_loop(shell_info);
 
     return EXIT_SUCCESS;
 }
@@ -65,3 +66,4 @@ int main(int argc, char **argv)
 {
     return entry_point(argc, argv);
 }
+

@@ -14,10 +14,10 @@
 
 /* Macros */
 #define BUF_FLUSH (int)(0)
-#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, NULL, 0}
+#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, 0}
 #define LIST_T_DEFINED
-#define UNUSED(x) (void)(x)
 #define WRITE_BUF_SIZE 1024
+
 
 /* Definition for environmental variables */
 extern char **environ;
@@ -45,10 +45,11 @@ typedef struct {
     char **history;
     const char *history_file;
     int readfd;
-       char *fname;
+    char *fname;
     char *line;
     char **argv;
     int line_count;
+    char cwd[1024];
 } info_t;
 
 /* Definition for the list node (linked list) */
@@ -60,12 +61,16 @@ typedef struct list_s {
 /* Function prototypes */
 
 /* Main shell functions */
-char** arrdup(char** argv);
+char **get_history(info_t *info);
+void add_to_history(info_t *info, char *line);
+void _strcpy(char *dest, const char *src);
+void _putchar(char c);
+char **arrdup(char **argv);
 void shell_loop(info_t *info);
-void write_history(info_t *info);
-void read_history(info_t *info);
-int find_builtin(info_t *info, char **argv);
-char *find_command_path(info_t *info, const char *command);
+void write_history(void);
+void read_history(void);
+int find_builtin(void);
+char *find_command_path(void);
 void *custom_realloc(void *ptr, size_t size);
 void custom_free_strings(char **str_arr);
 void custom_memset(void *ptr, int value, size_t size);
@@ -113,7 +118,7 @@ char *string_copy(const char *src);
 char *string_duplicate(char *str);
 void print_string(const char *str);
 void write_character(char c);
-size_t _strlen(const char *str);
+size_t _strlen(const char *s);
 int _strcmp(const char *s1, const char *s2);
 int _startswith(const char *haystack, const char *needle);
 char *_strcat(char *dest, const char *src);
@@ -149,8 +154,6 @@ int _setenv(char *name, char *value);
 
 /* Command execution functions */
 int my_exit(char **args);
-void execute_command(char *command);
-
-#endif /* SHELL_H */
-
+int execute_command(info_t *info, char **argv);
+#endif /* SHELL.H */
 

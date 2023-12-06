@@ -8,7 +8,9 @@
  */
 char *string_copy(const char *src)
 {
-    if (src == NULL)
+    size_t len;
+
+	if (src == NULL)
         return NULL;
 
     size_t len = _strlen(src);

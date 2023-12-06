@@ -1,9 +1,15 @@
 # Shell Built-in Commands
 
-## _myexit
+Certainly! Here's the code broken down into smaller, more detailed code blocks:
+
 ```c
 #include "shell.h"
+```
 
+**Header Inclusion:**
+This line includes the necessary header file for the shell project.
+
+```c
 /**
  * _myexit - exits the shell
  * @info: Structure containing potential arguments. Used to maintain
@@ -40,9 +46,9 @@ int _myexit(info_t *info)
     return (-2);
 }
 ```
-The `_myexit` function exits the shell. If an argument is provided, it attempts to convert it to an integer as an exit status using the custom `_erratoi` function. If successful, it sets the exit status; otherwise, it prints an error message.
 
-## _mycd
+**Function `_myexit` Description:**
+The `_myexit` function exits the shell. If an argument is provided, it attempts to convert it to an integer as an exit status using the custom `_erratoi` function. If successful, it sets the exit status; otherwise, it prints an error message.
 
 ```c
 /**
@@ -104,9 +110,10 @@ int _mycd(info_t *info)
     return (0);
 }
 ```
+
+**Function `_mycd` Description:**
 The `_mycd` function changes the current directory of the process. It supports changing to the home directory, the previous directory, or a specified directory. It updates environment variables accordingly.
 
-## _myhelp
 ```c
 /**
  * _myhelp - changes the current directory of the process
@@ -128,4 +135,5 @@ int _myhelp(info_t *info)
 }
 ```
 
+**Function `_myhelp` Description:**
 The `_myhelp` function currently provides a placeholder message indicating that the help function is not yet implemented. It is intended to offer assistance and information about shell commands.

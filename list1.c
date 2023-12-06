@@ -58,6 +58,7 @@ list_t *add_node_at_index(list_t **head __attribute__((unused)), size_t index __
  */
 int delete_node(list_t **head __attribute__((unused)), size_t index __attribute__((unused)))
 {
+    size_t i;	
     list_t *current_node, *prev_node;
 
     if (*head == NULL)
@@ -67,7 +68,6 @@ int delete_node(list_t **head __attribute__((unused)), size_t index __attribute_
 
     current_node = *head;
     prev_node = NULL;
-    size_t i;
 
     /* Traverse the list to the specified index */
     for (i = 0; i < index; i++)

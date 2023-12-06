@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+<<<<<<< HEAD
 int _strcmp(const char *s1, const char *s2) {
     while (*s1 && (*s1 == *s2)) {
         s1++;
@@ -12,6 +13,16 @@ int _strcmp(const char *s1, const char *s2) {
 }
 
 int unset_shell_alias(AliasNode **alias_list, const char *alias) {
+=======
+/**
+ * unset_shell_alias - Unset a shell alias.
+ * @alias_list: Pointer to the head of the alias list.
+ * @alias: Alias to unset.
+ * Return: 0 on success, -1 on failure.
+ */
+int unset_shell_alias(AliasNode **alias_list, const char *alias)
+{
+>>>>>>> 0da4a54af6c29b92d914984ac8fb9df7f6bbee38
     AliasNode *current = *alias_list, *prev = NULL;
 
     while (current != NULL) {

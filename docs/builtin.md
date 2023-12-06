@@ -1,4 +1,4 @@
-# Shell Built-in Commands - `builtin.c`
+# Shell Built-in Commands
 
 This file (`builtin.c`) contains implementations of built-in commands for a simple shell project. The built-in commands include `_myexit`, `_mycd`, and `_myhelp`, each serving a specific purpose within the shell.
 

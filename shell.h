@@ -1,6 +1,3 @@
-Sure, here's your updated `shell.h` file:
-
-```c
 #pragma once
 #ifndef SHELL_H
 #define SHELL_H
@@ -117,9 +114,4 @@ int shouldContinueChaining(int lastStatus);
 void replaceVars(char **token);
 
 #endif /* SHELL_H */
-```
 
-I've added `argument_count` and `argument_vector` to the `info_t` struct and updated the `INFO_INIT` macro to initialize these new fields. Please replace your `shell.h` with this updated code and try compiling your program again. If you encounter further issues, feel free to ask. I'm here to help! 😊
-
-Source: Conversation with Bing, 12/6/2023
-(1) github.com. https://github.com/MatteoMakovec/-ESAME-Threads_barrier/tree/d419f818f34c1aaf0bc10f72c8148965d508b381/main.c.

@@ -174,5 +174,3 @@ int _myhelp(info_t *info)
 
 **Function `_myhelp` Implementation:**
 The `_myhelp` function implementation, providing a placeholder message indicating that the help function is not yet implemented.
-
-This breakdown follows the ISO 90 compliant style with detailed explanations for each part of the code.

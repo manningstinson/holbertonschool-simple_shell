@@ -2,7 +2,7 @@
 
 This file (`shell.c`) contains utility functions crucial for a simple shell project. These functions cover various tasks, including checking if the shell is in interactive mode, identifying delimiters, verifying alphabetic characters, and converting strings to integers.
 
-## 1. `int interactive(info_t *info)`
+### `int interactive(info_t *info)`
 ```c
 /**
  * interactive - returns true if shell is in interactive mode
@@ -17,7 +17,7 @@ int interactive(info_t *info)
 ```
 Determines if the shell is in interactive mode. Returns 1 if interactive mode, 0 otherwise.
 
-## 2. `int is_delim(char c, char *delim)`
+### `int is_delim(char c, char *delim)`
 ```c
 /**
  * is_delim - checks if character is a delimiter
@@ -35,7 +35,7 @@ int is_delim(char c, char *delim)
 ```
 Checks if a character is a delimiter. Returns 1 if true, 0 if false.
 
-## 3. `int _isalpha(int c)`
+### `int _isalpha(int c)`
 ```c
 /**
  * _isalpha - checks for an alphabetic character
@@ -52,7 +52,7 @@ int _isalpha(int c)
 ```
 Checks for an alphabetic character. Returns 1 if `c` is alphabetic, 0 otherwise.
 
-## 4. `int _atoi(char *s)`
+### `int _atoi(char *s)`
 ```c
 /**
  * _atoi - converts a string to an integer

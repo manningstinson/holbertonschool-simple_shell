@@ -1,22 +1,27 @@
 # Shell Built-in Commands
 
-Certainly! Here's the code broken down into smaller, more detailed code blocks:
+Certainly! Let's break down the code in ISO 90 compliant style:
 
 ```c
 #include "shell.h"
 ```
 
 **Header Inclusion:**
-This line includes the necessary header file for the shell project.
+Includes the necessary header file for the shell project.
 
 ```c
 /**
  * _myexit - exits the shell
- * @info: Structure containing potential arguments. Used to maintain
- *         a constant function prototype.
- * Return: exits with a given exit status
- *         (0) if info->argv[0] != "exit"
+ * @info: Structure containing potential arguments.
+ *         Used to maintain a constant function prototype.
+ * Return: exits with a given exit status (0) if info->argv[0] != "exit"
  */
+```
+
+**Function `_myexit` Signature:**
+Declares the `_myexit` function, which exits the shell based on the provided arguments.
+
+```c
 int _myexit(info_t *info)
 {
     int exitcheck;
@@ -40,23 +45,34 @@ int _myexit(info_t *info)
         info->err_num = exitcheck;
         return (-2);
     }
+```
 
+**Function `_myexit` Implementation (Part 1):**
+The `_myexit` function implementation begins. It checks if an argument is provided, attempts to convert it to an integer using `_erratoi`, and handles invalid numbers.
+
+```c
     // No argument provided, set err_num to -1
     info->err_num = -1;
     return (-2);
 }
 ```
 
-**Function `_myexit` Description:**
-The `_myexit` function exits the shell. If an argument is provided, it attempts to convert it to an integer as an exit status using the custom `_erratoi` function. If successful, it sets the exit status; otherwise, it prints an error message.
+**Function `_myexit` Implementation (Part 2):**
+Continuation of `_myexit` function implementation. If no argument is provided, it sets `err_num` to -1.
 
 ```c
 /**
  * _mycd - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *         a constant function prototype.
+ * @info: Structure containing potential arguments.
+ *         Used to maintain a constant function prototype.
  * Return: Always 0
  */
+```
+
+**Function `_mycd` Signature:**
+Declares the `_mycd` function, responsible for changing the current directory.
+
+```c
 int _mycd(info_t *info)
 {
     char *s, *dir, buffer[1024];
@@ -64,7 +80,12 @@ int _mycd(info_t *info)
 
     // Get the current working directory
     s = getcwd(buffer, 1024);
+```
 
+**Function `_mycd` Implementation (Part 1):**
+Starts the implementation of the `_mycd` function. It gets the current working directory using `getcwd`.
+
+```c
     // Handle getcwd failure
     if (!s)
         _puts("TODO: >>getcwd failure emsg here<<\n");
@@ -78,6 +99,12 @@ int _mycd(info_t *info)
         else
             chdir_ret = chdir(dir);
     }
+```
+
+**Function `_mycd` Implementation (Part 2):**
+Continuation of `_mycd` implementation. Handles `getcwd` failure and checks if no argument is provided to change to the home directory.
+
+```c
     // Argument is "-", change to the previous directory
     else if (_strcmp(info->argv[1], "-") == 0)
     {
@@ -90,7 +117,12 @@ int _mycd(info_t *info)
         _puts(_getenv(info, "OLDPWD=")), _putchar('\n');
         chdir_ret = chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
     }
-    // Change to the specified directory
+```
+
+**Function `_mycd` Implementation (Part 3):**
+Continuation of `_mycd` implementation. Handles the case where the argument is "-", changing to the previous directory.
+
+```c
     else
         chdir_ret = chdir(info->argv[1]);
 
@@ -111,16 +143,22 @@ int _mycd(info_t *info)
 }
 ```
 
-**Function `_mycd` Description:**
-The `_mycd` function changes the current directory of the process. It supports changing to the home directory, the previous directory, or a specified directory. It updates environment variables accordingly.
+**Function `_mycd` Implementation (Part 4):**
+Final part of `_mycd` implementation. Handles changing to a specified directory, chdir failure, and updates environment variables.
 
 ```c
 /**
  * _myhelp - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *         a constant function prototype.
+ * @info: Structure containing potential arguments.
+ *         Used to maintain a constant function prototype.
  * Return: Always 0
  */
+```
+
+**Function `_myhelp` Signature:**
+Declares the `_myhelp` function, which currently provides a placeholder message.
+
+```c
 int _myhelp(info_t *info)
 {
     char **arg_array;
@@ -135,5 +173,7 @@ int _myhelp(info_t *info)
 }
 ```
 
-**Function `_myhelp` Description:**
-The `_myhelp` function currently provides a placeholder message indicating that the help function is not yet implemented. It is intended to offer assistance and information about shell commands.
+**Function `_myhelp` Implementation:**
+The `_myhelp` function implementation, providing a placeholder message indicating that the help function is not yet implemented.
+
+This breakdown follows the ISO 90 compliant style with detailed explanations for each part of the code.

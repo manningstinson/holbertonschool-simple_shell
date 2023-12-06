@@ -6,12 +6,21 @@
 
 /**
  * execute_command - Execute a shell command
- * @command: The command to execute
+ * @info: The information about the shell
+ * @argv: The command and its arguments
+ *
+ * Return: 0 on success, -1 on failure
  */
-void execute_command(char *command)
+int execute_command(info_t *info, char **argv)
 {
-    UNUSED(command);
-    /* Your implementation here */
+    int result;  /* Declaration moved to the beginning of the block */
+
+    /* Example: Print the current working directory and the command */
+    printf("Current working directory: %s\n", info->cwd);
+    printf("Command: %s\n", argv[0]);
+
+    result = 0;  /* Replace with your actual logic */
+    return result;
 }
 
 /**

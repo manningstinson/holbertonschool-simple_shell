@@ -7,9 +7,12 @@
 
 /**
  * execute_command - Execute external commands
- * @command: The command to execute
+ * @info: The information about the shell
+ * @argv: The command and its arguments
+ *
+ * Return: 0 on success, -1 on failure
  */
-void execute_command(char *command)
+int execute_command(info_t *info, char **argv)
 {
     pid_t child_pid;
     int status;
@@ -18,19 +21,15 @@ void execute_command(char *command)
     if (child_pid == -1)
     {
         perror("fork");
-        exit(EXIT_FAILURE);
+        return (-1);
     }
 
     if (child_pid == 0)
     {
         /* Child process */
-        char *args[2];
-        args[0] = command;
-        args[1] = NULL;
-
-        if (execv(command, args) == -1)
+        if (execv(argv[0], argv) == -1)
         {
-            fprintf(stderr, "%s: command not found\n", command);
+            fprintf(stderr, "%s: command not found\n", argv[0]);
             exit(EXIT_FAILURE);
         }
     }
@@ -39,4 +38,7 @@ void execute_command(char *command)
         /* Parent process */
         waitpid(child_pid, &status, 0);
     }
+    printf("Current working directory: %s\n", info->cwd);
+    return (0);
 }
+

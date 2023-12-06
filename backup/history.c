@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Declare the global variables */
+char *filename = ".history";
+info_t *info = NULL;
+
 /**
  * get_history - Get the command history.
  * @info: Pointer to the information struct.
@@ -9,7 +13,18 @@
  */
 char **get_history(info_t *info)
 {
-    return info->history;
+    return (info->history);
+}
+
+/**
+ * add_to_history - Add a line to the command history.
+ * @info: Pointer to the information struct.
+ * @line: The line to add to the history.
+ */
+void add_to_history(info_t *info, char *line)
+{
+   (void)info;
+    (void)line;
 }
 
 /**
@@ -17,10 +32,11 @@ char **get_history(info_t *info)
  * @info: Pointer to the information struct.
  * @filename: Name of the file to write the history to.
  */
-void write_history(info_t *info);
+void write_history(void)
 {
     FILE *file = fopen(filename, "w");
     char **history = get_history(info);
+    size_t i;
 
     if (file == NULL)
     {
@@ -28,7 +44,7 @@ void write_history(info_t *info);
         return;
     }
 
-    for (size_t i = 0; history[i] != NULL; i++)
+    for (i = 0; history[i] != NULL; i++)
     {
         fprintf(file, "%s\n", history[i]);
     }
@@ -41,7 +57,7 @@ void write_history(info_t *info);
  * @info: Pointer to the information struct.
  * @filename: Name of the file to read the history from.
  */
-void read_history(info_t *info);
+void read_history(void)
 {
     FILE *file = fopen(filename, "r");
     char *line = NULL;

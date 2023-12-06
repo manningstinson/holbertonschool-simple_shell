@@ -37,6 +37,7 @@ int check_executable(const char *command, const char *path)
  */
 char *duplicate_chars(const char *str)
 {
+    size_t i; /* Declare 'i' outside of the loop for C99 compatibility */
     size_t len = strlen(str);
     char *duplicate = malloc((2 * len + 1) * sizeof(char));
 
@@ -46,7 +47,7 @@ char *duplicate_chars(const char *str)
         exit(EXIT_FAILURE);
     }
 
-    for (size_t i = 0; i < len; i++)
+    for (i = 0; i < len; i++)
     {
         duplicate[2 * i] = str[i];
         duplicate[2 * i + 1] = str[i];

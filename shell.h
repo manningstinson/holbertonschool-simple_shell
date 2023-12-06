@@ -14,9 +14,8 @@
 
 /* Macros */
 #define BUF_FLUSH (int)(0)
-#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, NULL, 0}
+#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, 0, {0}, 0, NULL}
 #define LIST_T_DEFINED
-#define UNUSED(x) (void)(x)
 #define WRITE_BUF_SIZE 1024
 
 /* Definition for environmental variables */
@@ -45,10 +44,13 @@ typedef struct {
     char **history;
     const char *history_file;
     int readfd;
-       char *fname;
+    char *fname;
     char *line;
     char **argv;
     int line_count;
+    char cwd[1024];
+    int argument_count;
+    char **argument_vector;
 } info_t;
 
 /* Definition for the list node (linked list) */
@@ -60,12 +62,16 @@ typedef struct list_s {
 /* Function prototypes */
 
 /* Main shell functions */
-char** arrdup(char** argv);
+char **get_history(info_t *info);
+void add_to_history(info_t *info, char *line);
+void _strcpy(char *dest, const char *src);
+void _putchar(char c);
+char **arrdup(char **argv);
 void shell_loop(info_t *info);
-void write_history(info_t *info);
-void read_history(info_t *info);
-int find_builtin(info_t *info, char **argv);
-char *find_command_path(info_t *info, const char *command);
+void write_history(void);
+void read_history(void);
+int find_builtin(void);
+char *find_command_path(void);
 void *custom_realloc(void *ptr, size_t size);
 void custom_free_strings(char **str_arr);
 void custom_memset(void *ptr, int value, size_t size);
@@ -105,52 +111,7 @@ int custom_puts_fd(char *str, int fd);
 /* Variable substitution and tokenization functions */
 int isChainDelimiter(char c);
 int shouldContinueChaining(int lastStatus);
-void replaceVars(char **tokens);
-void replaceAliases(char **tokens);
-void replaceAliasesAndVars(char **tokens);
-char **tokenize(char *str);
-char *string_copy(const char *src);
-char *string_duplicate(char *str);
-void print_string(const char *str);
-void write_character(char c);
-size_t _strlen(const char *str);
-int _strcmp(const char *s1, const char *s2);
-int _startswith(const char *haystack, const char *needle);
-char *_strcat(char *dest, const char *src);
-
-/* List manipulation functions */
-size_t list_len(list_t *head);
-char **list_to_strings(list_t *head);
-void print_node_start(list_t *start);
-void print_node_at_index(list_t *head, size_t index);
-list_t *add_node(list_t **head, const char *str);
-list_t *add_node_at_index(list_t **head, size_t index, const char *str);
-void print_list_str(list_t *head);
-int delete_node(list_t **head, size_t index);
-void free_list(list_t **head);
-
-/* I/O and string manipulation functions */
-void custom_puts(char *str);
-int custom_putchar(char c);
-int custom_putchar_fd(char c, int fd);
-int custom_puts_fd(char *str, int fd);
-
-/* Conversion and error handling functions */
-int convertStringToInt(char *s);
-void displayError(info_t *info, char *estr);
-void printDecimal(int n, int fd);
-int itoaClone(int n, char *str, size_t size);
-void replaceFirstHash(char *str);
-
-/* Environmental variable functions */
-char *_getenv(char *name);
-int _unsetenv(char *name);
-int _setenv(char *name, char *value);
-
-/* Command execution functions */
-int my_exit(char **args);
-void execute_command(char *command);
+void replaceVars(char **token);
 
 #endif /* SHELL_H */
-
 

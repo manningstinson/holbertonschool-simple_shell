@@ -1,6 +1,5 @@
 # Shell Built-in Commands
-
-Certainly! Let's break down the code in ISO 90 compliant style:
+These functions collectively contribute to the basic functionality of a shell, including the ability to exit, navigate directories, and potentially obtain help on command usage. In a simple shell project, these functions form essential building blocks for user interaction and control over the shell's behavior.
 
 ```c
 #include "shell.h"

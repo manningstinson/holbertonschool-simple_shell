@@ -1,6 +1,11 @@
 # ATOI
-Summary: The `_atoi` function converts a string to an integer, considering signs and ignoring non-numeric characters after the first non-numeric character.
 
+**_atoi Function:**
+- Converts a string to an integer.
+- Takes into account both positive and negative signs in the string.
+- Ignores non-numeric characters after encountering the first non-numeric character in the string.
+
+This function is essential for processing numeric inputs in the shell, particularly when converting user-provided strings to integers during command execution.
 
 ```c
 #include "shell.h"

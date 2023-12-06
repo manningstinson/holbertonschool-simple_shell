@@ -2,6 +2,7 @@
 ```c
 #include "shell.h"
 
+### _myexit
 /**
  * _myexit - exits the shell
  * @info: Structure containing potential arguments. Used to maintain

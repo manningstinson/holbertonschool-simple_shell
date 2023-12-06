@@ -18,7 +18,6 @@
 #define LIST_T_DEFINED
 #define WRITE_BUF_SIZE 1024
 
-
 /* Definition for environmental variables */
 extern char **environ;
 

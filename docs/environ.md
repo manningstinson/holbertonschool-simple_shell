@@ -1,119 +1,92 @@
-# Environment
-
-This C code defines functions for interacting with environment variables in a simple shell. It includes functions to print the environment, retrieve, set, and unset specific variables, as well as populate the environment with a provided set of variables. These utilities enhance the shell's capability to manage and utilize environmental information.
-
-```c
 #include "shell.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-```
 
-This section includes necessary header files for the C code. `"shell.h"` is presumably a custom header file specific to the shell implementation, and the standard library headers (`stdio.h`, `stdlib.h`, and `string.h`) are included for various functionalities.
-
-```c
 /**
- * my_enviro - Print the environment
+ * _myenv - prints the current environment
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ * Return: Always 0
+ */
+int _myenv(info_t *info)
+{
+	print_list_str(info->env);
+	return (0);
+}
+
+/**
+ * _getenv - gets the value of an environ variable
+ * @info: Structure containing potential arguments. Used to maintain
+ * @name: env var name
  *
- * Return: Always returns 0, to indicate success
+ * Return: the value
  */
-int my_enviro(__attribute__((unused)) char **args)
+char *_getenv(info_t *info, const char *name)
 {
-    char **env = environ;
+	list_t *node = info->env;
+	char *p;
 
-    while (*env != NULL)
-    {
-        printf("%s\n", *env);
-        env++;
-    }
-
-    return 0;
+	while (node)
+	{
+		p = starts_with(node->str, name);
+		if (p && *p)
+			return (p);
+		node = node->next;
+	}
+	return (NULL);
 }
-```
 
-The `my_enviro` function prints the environment variables to the console. It uses the `environ` variable, which is a global variable containing the environment variables, and iterates through the array, printing each variable. The `__attribute__((unused))` annotation indicates that the `args` parameter is not currently used, suppressing any compiler warnings.
-
-```c
 /**
- * get_enviro - Get the value of an environment variable
- * @name: The name of the environment variable
- *
- * Return: The value of the environment variable, or NULL if not found
+ * _mysetenv - Initialize a new environment variable,
+ *             or modify an existing one
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ *  Return: Always 0
  */
-char *get_enviro(char *name)
+int _mysetenv(info_t *info)
 {
-    return getenv(name);
+	if (info->argc != 3)
+	{
+		_eputs("Incorrect number of arguements\n");
+		return (1);
+	}
+	if (_setenv(info, info->argv[1], info->argv[2]))
+		return (0);
+	return (1);
 }
-```
 
-The `get_enviro` function retrieves the value of a specified environment variable. It uses the `getenv` function provided by the standard library, which returns a pointer to the value of the specified environment variable or NULL if the variable is not found.
-
-```c
 /**
- * set_enviro - Set the value of an environment variable
- * @name: The name of the environment variable
- * @value: The new value for the environment variable
- *
- * Return: 0 on success, -1 on failure
+ * _myunsetenv - Remove an environment variable
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ *  Return: Always 0
  */
-int set_enviro(char *name, char *value)
+int _myunsetenv(info_t *info)
 {
-    if (name == NULL || value == NULL)
-        return -1;
+	int i;
 
-    if (setenv(name, value, 1) != 0)
-    {
-        perror("setenv");
-        return -1;
-    }
+	if (info->argc == 1)
+	{
+		_eputs("Too few arguements.\n");
+		return (1);
+	}
+	for (i = 1; i <= info->argc; i++)
+		_unsetenv(info, info->argv[i]);
 
-    return 0;
+	return (0);
 }
-```
 
-The `set_enviro` function sets the value of a specified environment variable. It uses the `setenv` function, which adds or modifies an environment variable. The third argument `1` indicates that existing variables with the same name should be replaced. The function returns 0 on success and -1 on failure, printing an error message using `perror` if needed.
-
-```c
 /**
- * unset_enviro - Unset an environment variable
- * @name: The name of the environment variable to unset
- *
- * Return: 0 on success, -1 on failure
+ * populate_env_list - populates env linked list
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ * Return: Always 0
  */
-int unset_enviro(char *name)
+int populate_env_list(info_t *info)
 {
-    if (name == NULL)
-        return -1;
+	list_t *node = NULL;
+	size_t i;
 
-    if (unsetenv(name) != 0)
-    {
-        perror("unsetenv");
-        return -1;
-    }
-
-    return 0;
+	for (i = 0; environ[i]; i++)
+		add_node_end(&node, environ[i], 0);
+	info->env = node;
+	return (0);
 }
-```
-
-The `unset_enviro` function removes a specified environment variable. It uses the `unsetenv` function provided by the standard library. Similar to the previous functions, it returns 0 on success and -1 on failure, printing an error message if needed.
-
-```c
-/**
- * populate_enviro - Populate the environment with provided variables
- * @envp: The array of environment variables to set
- */
-void populate_enviro(char **envp)
-{
-    int i = 0;
-
-    while (envp[i] != NULL)
-    {
-        putenv(envp[i]);
-        i++;
-    }
-}
-```
-
-The `populate_enviro` function sets the environment variables based on the provided array `envp`. It uses the `putenv` function, which adds or modifies an environment variable. The function iterates through the array until a `NULL` entry is encountered, setting each environment variable accordingly.
-
-In a simple shell context, these functions provide essential utilities for managing and interacting with environment variables. They enable the shell to print the environment, retrieve, set, and unset specific variables, as well as populate the environment with a provided set of variables.

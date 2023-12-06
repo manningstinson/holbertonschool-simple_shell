@@ -1,100 +1,115 @@
-# BuiltIn 1 (builtin1.c)
-This C code defines essential functions for a simple shell. The `execute_command` function serves as a placeholder for executing shell commands, while built-in commands like `shell_exit`, `shell_cd`, and `shell_help` handle exiting the shell, changing the directory, and displaying help information, respectively. The code also includes a utility function, `handle_cd_error`, to handle errors encountered during the `cd` command, displaying appropriate error messages.
-
-```c
 #include "shell.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-```
 
-This section includes necessary header files for the C code. `"shell.h"` is presumably a custom header file specific to the shell implementation, and the standard library headers (`stdio.h`, `stdlib.h`, `string.h`, and `unistd.h`) are included for various functionalities.
-
-```c
 /**
- * execute_command - Execute a shell command
- * @command: The command to execute
+ * _myhistory - displays the history list, one command by line, preceded
+ *              with line numbers, starting at 0.
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ *  Return: Always 0
  */
-void execute_command(char *command)
+int _myhistory(info_t *info)
 {
-    UNUSED(command);
-    /* Your implementation here */
+	print_list(info->history);
+	return (0);
 }
-```
 
-The `execute_command` function is a placeholder for executing shell commands. The `UNUSED(command)` macro indicates that the `command` parameter is currently unused in the function. The comment suggests that the actual implementation of executing a command is expected to be written in place of the placeholder.
-
-```c
 /**
- * shell_exit - Exit the shell
+ * unset_alias - sets alias to string
+ * @info: parameter struct
+ * @str: the string alias
  *
- * Return: Always returns 0, to indicate success
+ * Return: Always 0 on success, 1 on error
  */
-int shell_exit(void)
+int unset_alias(info_t *info, char *str)
 {
-    exit(0);
+	char *p, c;
+	int ret;
+
+	p = _strchr(str, '=');
+	if (!p)
+		return (1);
+	c = *p;
+	*p = 0;
+	ret = delete_node_at_index(&(info->alias),
+		get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
+	*p = c;
+	return (ret);
 }
-```
 
-The `shell_exit` function is a simple built-in command to exit the shell. It calls the `exit` function with a status code of 0, indicating a successful exit.
-
-```c
 /**
- * shell_cd - Change directory
- * @args: The arguments passed to the command (should contain the new directory)
+ * set_alias - sets alias to string
+ * @info: parameter struct
+ * @str: the string alias
  *
- * Return: 0 on success, -1 on failure
+ * Return: Always 0 on success, 1 on error
  */
-int shell_cd(char **args)
+int set_alias(info_t *info, char *str)
 {
-    if (args[1] == NULL)
-    {
-        fprintf(stderr, "shell: expected argument to \"cd\"\n");
-        return -1;
-    }
+	char *p;
 
-    if (chdir(args[1]) != 0)
-        return handle_cd_error(args[1]);
+	p = _strchr(str, '=');
+	if (!p)
+		return (1);
+	if (!*++p)
+		return (unset_alias(info, str));
 
-    return 0;
+	unset_alias(info, str);
+	return (add_node_end(&(info->alias), str, 0) == NULL);
 }
-```
 
-The `shell_cd` function handles the built-in command to change the current working directory. It expects the new directory as an argument in `args`. If the argument is not provided, it prints an error message and returns -1. If the `chdir` function fails, it calls the `handle_cd_error` function, otherwise, it returns 0 to indicate success.
-
-```c
 /**
- * shell_help - Display information about built-in commands
+ * print_alias - prints an alias string
+ * @node: the alias node
  *
- * Return: Always returns 0, to indicate success
+ * Return: Always 0 on success, 1 on error
  */
-int shell_help(void)
+int print_alias(list_t *node)
 {
-    printf("Simple Shell\n");
-    printf("Built-in commands:\n");
-    printf("  exit - Exit the shell\n");
-    printf("  cd - Change directory\n");
-    printf("  help - Display information about built-in commands\n");
+	char *p = NULL, *a = NULL;
 
-    return 0;
+	if (node)
+	{
+		p = _strchr(node->str, '=');
+		for (a = node->str; a <= p; a++)
+			_putchar(*a);
+		_putchar('\'');
+		_puts(p + 1);
+		_puts("'\n");
+		return (0);
+	}
+	return (1);
 }
-```
 
-The `shell_help` function displays information about built-in commands of the shell. It prints a simple help message to the console, listing the available built-in commands: `exit`, `cd`, and `help`. It always returns 0 to indicate success.
-
-```c
 /**
- * handle_cd_error - Display an error message for cd command
- * @path: The path that caused the error
- *
- * Return: Always returns -1, to indicate failure
+ * _myalias - mimics the alias builtin (man alias)
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ *  Return: Always 0
  */
-int handle_cd_error(char *path)
+int _myalias(info_t *info)
 {
-    perror(path);
-    return -1;
-}
-```
+	int i = 0;
+	char *p = NULL;
+	list_t *node = NULL;
 
-The `handle_cd_error` function is a utility function to display an error message when the `cd` command encounters an issue. It uses the `perror` function to print an error message based on the value of `errno` related to the last `chdir` operation. It always returns -1 to indicate failure.
+	if (info->argc == 1)
+	{
+		node = info->alias;
+		while (node)
+		{
+			print_alias(node);
+			node = node->next;
+		}
+		return (0);
+	}
+	for (i = 1; info->argv[i]; i++)
+	{
+		p = _strchr(info->argv[i], '=');
+		if (p)
+			set_alias(info, info->argv[i]);
+		else
+			print_alias(node_starts_with(info->alias, info->argv[i], '='));
+	}
+
+	return (0);
+}

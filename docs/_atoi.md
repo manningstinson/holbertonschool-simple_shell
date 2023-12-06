@@ -1,6 +1,6 @@
 # Shell Utility Functions
 
-This file (`shell.c`) contains utility functions crucial for a simple shell project. These functions cover various tasks, including checking if the shell is in interactive mode, identifying delimiters, verifying alphabetic characters, and converting strings to integers.
+This file (`_atoi.c`) contains utility functions crucial for a simple shell project. These functions cover various tasks, including checking if the shell is in interactive mode, identifying delimiters, verifying alphabetic characters, and converting strings to integers.
 
 ### `int interactive(info_t *info)`
 ```c

@@ -65,7 +65,3 @@ int _atoi(char *s)
 }
 ```
 Converts a string to an integer. Returns 0 if no numbers in the string, the converted number otherwise.
-
----
-
-Feel free to replace `shell.c` with the actual name of your C file. This README summary provides a clear overview of each function and its purpose within the context of the simple shell project.

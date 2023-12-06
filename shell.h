@@ -49,8 +49,8 @@ typedef struct {
     char **argv;
     int line_count;
     char cwd[1024];
-    int argument_count; // Added
-    char **argument_vector; // Added
+    int argument_count;
+    char **argument_vector;
 } info_t;
 
 /* Definition for the list node (linked list) */

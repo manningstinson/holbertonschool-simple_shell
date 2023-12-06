@@ -22,7 +22,7 @@ int interactive(info_t *info)
 }
 ```
 
-Summary: The `interactive` function checks whether the shell is running in interactive mode by verifying if the input is from a terminal.
+The `interactive` function checks whether the shell is running in interactive mode by verifying if the input is from a terminal.
 
 ```c
 /**
@@ -41,7 +41,7 @@ int is_delim(char c, char *delim)
 }
 ```
 
-Summary: The `is_delim` function checks if a given character is a delimiter by iterating through the provided delimiter string.
+The `is_delim` function checks if a given character is a delimiter by iterating through the provided delimiter string.
 
 ```c
 /**
@@ -56,7 +56,7 @@ int _isalpha(int c)
 }
 ```
 
-Summary: The `_isalpha` function checks if a given character is alphabetic.
+The `_isalpha` function checks if a given character is alphabetic.
 
 ```c
 /**

@@ -14,7 +14,7 @@
 
 /* Macros */
 #define BUF_FLUSH (int)(0)
-#define INFO_INIT { NULL, NULL, NULL, -1, NULL, NULL, NULL, 0 }
+#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, 0}
 #define LIST_T_DEFINED
 #define WRITE_BUF_SIZE 1024
 
@@ -154,5 +154,4 @@ int _setenv(char *name, char *value);
 /* Command execution functions */
 int my_exit(char **args);
 int execute_command(info_t *info, char **argv);
-
-#endif /* SHELL_H */
+#endif /* SHELL.H */

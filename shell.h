@@ -14,7 +14,7 @@
 
 /* Macros */
 #define BUF_FLUSH (int)(0)
-#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, 0, {0}, 0, NULL} // Updated
+#define INFO_INIT {NULL, NULL, NULL, -1, NULL, NULL, NULL, 0, {0}, 0, NULL}
 #define LIST_T_DEFINED
 #define WRITE_BUF_SIZE 1024
 

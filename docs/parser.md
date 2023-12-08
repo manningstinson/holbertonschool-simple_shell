@@ -1,6 +1,6 @@
 # parser.c
 
-This file contains functions related to parsing and finding executable commands in the shell.
+The parser.c file provides functions for parsing and locating executable commands within the shell. These functions are essential for the shell to locate and execute commands entered by the user, contributing to the overall functionality of the shell program.
 
 ### `is_cmd`
 

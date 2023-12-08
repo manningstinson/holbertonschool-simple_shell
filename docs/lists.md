@@ -1,4 +1,4 @@
-### File: lists.c
+# lists.c
 
 This file, **lists.c**, contains functions for managing linked lists in the shell program. Below is a detailed explanation of each function:
 

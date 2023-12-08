@@ -1,5 +1,5 @@
 # builtin1.c
-This file comprises essential functions for a simple shell implementation. The _myhistory function facilitates the display of command history, leveraging the print_list function. unset_alias and set_alias handle the removal and addition/update of aliases in a list, respectively. The print_alias function is responsible for printing an alias stored in a linked list node. Lastly, _myalias mimics the behavior of the alias built-in command, allowing users to view, set, or update aliases. This set of functions forms the core functionality of the shell, providing history tracking and alias management features.
+This file comprises essential functions for a simple shell implementation. The `_myhistory` function facilitates the display of command history, leveraging the print_list function. unset_alias and set_alias handle the removal and addition/update of aliases in a list, respectively. The print_alias function is responsible for printing an alias stored in a linked list node. Lastly, `_myalias` mimics the behavior of the alias built-in command, allowing users to view, set, or update aliases. This set of functions forms the core functionality of the shell, providing history tracking and alias management features.
 
 ## \_myhistory Function
 

@@ -1,5 +1,5 @@
 # string.c
-The file contains several essential string manipulation functions for the custom shell.
+The `string.c` file provides essential string manipulation functions for the custom shell. These functions are crucial for various operations within the shell, such as handling command-line input, comparing strings, and concatenating strings. They contribute to the overall functionality and robustness of the custom shell by facilitating effective string processing.
 
 ## Code Block: _strlen
 ```c

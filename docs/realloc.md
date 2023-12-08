@@ -1,8 +1,6 @@
 # realloc.c
 
-The realloc.c file houses essential memory manipulation functions. The _memset function fills a given memory area with a constant byte. 
-
-The ffree function facilitates the proper freeing of a string of strings, preventing memory leaks. Finally, the _realloc function dynamically reallocates memory, allowing for resizing memory blocks efficiently. 
+The realloc.c file houses essential memory manipulation functions. The _memset function fills a given memory area with a constant byte. The ffree function facilitates the proper freeing of a string of strings, preventing memory leaks. Finally, the _realloc function dynamically reallocates memory, allowing for resizing memory blocks efficiently. 
 
 These functions are foundational for effective memory management in C programs, ensuring optimal usage and preventing memory-related issues.
 

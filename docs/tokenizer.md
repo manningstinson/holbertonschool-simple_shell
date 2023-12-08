@@ -1,6 +1,4 @@
-# File: tokenizer.c
-
-## Summary:
+# tokenizer.c
 The file `tokenizer.c` contains two functions, `strtow` and `strtow2`, responsible for splitting a string into words based on delimiters. The first function, `strtow`, allows for multiple delimiters, while the second function, `strtow2`, works with a single delimiter.
 
 ## Code Block: strtow

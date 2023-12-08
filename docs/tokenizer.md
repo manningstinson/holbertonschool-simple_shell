@@ -1,7 +1,7 @@
 # tokenizer.c
 The file `tokenizer.c` contains two functions, `strtow` and `strtow2`, responsible for splitting a string into words based on delimiters. The first function, `strtow`, allows for multiple delimiters, while the second function, `strtow2`, works with a single delimiter.
 
-## Code Block: strtow
+## strtow
 ```c
 /**
  * **strtow - splits a string into words. Repeat delimiters are ignored
@@ -53,7 +53,7 @@ char **strtow(char *str, char *d)
 
 The `strtow` function splits a string (`str`) into words using delimiters specified in the delimeter string (`d`). It counts the number of words, allocates memory for an array of strings, and then populates the array with the extracted words. The resulting array is terminated with a NULL pointer. The function returns the array of strings or NULL on failure.
 
-## Code Block: strtow2
+## strtow2
 ```c
 /**
  * **strtow2 - splits a string into words

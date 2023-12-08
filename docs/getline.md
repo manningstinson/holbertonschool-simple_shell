@@ -1,12 +1,8 @@
 # getline.c
-
-**getline.c Summary**
-
-The `getline.c` file serves a pivotal role in the Simple Shell project, focusing on the processing of user input and managing command line interactions. Within this file, several key functions contribute to the functionality of the shell. The `input_buf` function is responsible for buffering chained commands, reading from standard input, and dynamically resizing buffers. It adeptly detects and processes command chains, removes trailing newlines, and updates the command history. The `get_input` function reads user input, manages command chains, and handles the command history, checking for chained commands, iterating through the buffer, and returning the length of the current command. Additionally, the `read_buf` function facilitates the reading of a buffer from the specified file descriptor, aiding input retrieval. The `_getline` function plays a crucial role in retrieving the next line of input from STDIN, handling buffer allocation, dynamic resizing, and newline character detection. Lastly, the `sigintHandler` function effectively blocks Ctrl-C, providing a user-friendly response to the corresponding signal. It displays a newline character, a shell prompt, ensuring a smooth and intuitive user experience. These functions collectively contribute to the robust handling of user input, enabling proper command execution and enhancing user interaction within the Simple Shell program.
+The getline.c file is integral to the Simple Shell project, primarily handling user input and command line interactions. It houses essential functions that contribute to the shell's overall functionality.
 
 ## `input_buf` Function
-
-The `input_buf` function buffers chained commands, reads from the standard input, and handles dynamic buffer resizing.
+The `input_buf` function is responsible for buffering chained commands and dynamically resizing buffers. It efficiently detects and processes command chains, removes trailing newlines, and updates the command history as needed.
 
 ```c
 /**
@@ -56,7 +52,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 
 ## `get_input` Function
 
-The `get_input` function reads user input, manages command chains, and handles command history.
+The `get_input` function plays a key role in reading user input, managing command chains, and handling the command history. It checks for chained commands, iterates through the buffer, and returns the length of the current command, ensuring accurate and streamlined user interaction.
 
 ```c
 /**
@@ -107,7 +103,7 @@ ssize_t get_input(info_t *info)
 
 ## `read_buf` Function
 
-The `read_buf` function reads a buffer from the specified file descriptor.
+For reading buffers from a file descriptor, the `read_buf` function proves invaluable. It facilitates the retrieval of input, aiding in the seamless functioning of the shell.
 
 ```c
 /**
@@ -133,7 +129,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 
 ## `_getline` Function
 
-The `_getline` function gets the next line of input from STDIN.
+The `_getline` function is crucial for obtaining the next line of input from STDIN. It handles buffer allocation, dynamic resizing, and newline character detection, ensuring the effective processing of user commands.
 
 ```c
 /**
@@ -186,7 +182,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 
 ## `sigintHandler` Function
 
-The `sigintHandler` function blocks Ctrl-C and handles the corresponding signal.
+The `sigintHandler` function enhances user experience by blocking Ctrl-C. It responds gracefully by displaying a newline character and the shell prompt, maintaining a user-friendly environment within the Simple Shell program.
 
 ```c
 /**

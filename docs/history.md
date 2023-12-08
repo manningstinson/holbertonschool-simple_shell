@@ -1,6 +1,6 @@
 # history.c
 
-### `get_history_file` Function
+### `get_history_file`
 
 This function is responsible for obtaining the path of the history file by combining the user's home directory and a predefined history file name.
 
@@ -31,7 +31,7 @@ char *get_history_file(info_t *info) {
 }
 ```
 
-### `write_history` Function
+### `write_history`
 
 This function writes the command history stored in the linked list to a file. It opens the file, writes each history entry, and then closes the file.
 
@@ -68,7 +68,7 @@ int write_history(info_t *info) {
 }
 ```
 
-### `read_history` Function
+### `read_history`
 
 This function reads the command history from a file and populates the history linked list. It opens the file, reads its content, and builds the history list accordingly.
 
@@ -135,7 +135,7 @@ int read_history(info_t *info) {
 }
 ```
 
-### `build_history_list` Function
+### `build_history_list`
 
 This function adds a new entry to the history linked list.
 
@@ -163,7 +163,7 @@ int build_history_list(info_t *info, char *buf, int linecount) {
 }
 ```
 
-### `renumber_history` Function
+### `renumber_history`
 
 This function renumbers the history linked list after changes.
 

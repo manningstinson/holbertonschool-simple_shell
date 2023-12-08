@@ -1,6 +1,8 @@
 # getline.c
 
-This file, `getline.c`, is integral to the Simple Shell project and encompasses functions crucial for handling user input, buffering chained commands, and managing the command line history. Let's delve into each function:
+**getline.c Summary**
+
+The `getline.c` file serves a pivotal role in the Simple Shell project, focusing on the processing of user input and managing command line interactions. Within this file, several key functions contribute to the functionality of the shell. The `input_buf` function is responsible for buffering chained commands, reading from standard input, and dynamically resizing buffers. It adeptly detects and processes command chains, removes trailing newlines, and updates the command history. The `get_input` function reads user input, manages command chains, and handles the command history, checking for chained commands, iterating through the buffer, and returning the length of the current command. Additionally, the `read_buf` function facilitates the reading of a buffer from the specified file descriptor, aiding input retrieval. The `_getline` function plays a crucial role in retrieving the next line of input from STDIN, handling buffer allocation, dynamic resizing, and newline character detection. Lastly, the `sigintHandler` function effectively blocks Ctrl-C, providing a user-friendly response to the corresponding signal. It displays a newline character, a shell prompt, ensuring a smooth and intuitive user experience. These functions collectively contribute to the robust handling of user input, enabling proper command execution and enhancing user interaction within the Simple Shell program.
 
 ## `input_buf` Function
 

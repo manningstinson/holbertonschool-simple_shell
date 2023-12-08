@@ -1,4 +1,4 @@
-Certainly! Here's the full code for **history.c** with summary explanations for each function:
+# history.c
 
 ### `get_history_file` Function
 

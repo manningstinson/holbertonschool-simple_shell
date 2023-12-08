@@ -1,6 +1,6 @@
-# get_info.c
+# getinfo.c
 
-In summary, `get_info.c` is a crucial component in the Simple Shell program, providing functions to initialize, set values, and free memory for the `info_t` struct. These functions contribute to the overall functionality and memory management of the Simple Shell, ensuring proper initialization and cleanup of the information structure.
+In summary, `getinfo.c` is a crucial component in the Simple Shell program, providing functions to initialize, set values, and free memory for the `info_t` struct. These functions contribute to the overall functionality and memory management of the Simple Shell, ensuring proper initialization and cleanup of the information structure.
 
 ## `clear_info` Function
 

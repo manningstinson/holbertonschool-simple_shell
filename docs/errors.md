@@ -1,6 +1,6 @@
 # errors.c
+In summary, `eoutput.c` facilitates enhanced output to `stderr` in the Simple Shell program. The functions `_eputs`, `_eputchar`, `_putfd`, and `_putsfd` collectively optimize character output operations, providing efficiency and flexibility in handling errors and user feedback within the shell.
 
-This file, `errors.c`, is integral to the Simple Shell program, providing functions for enhanced output to the standard error stream (`stderr`). Let's break down each function:
 
 ## \_eputs Function
 
@@ -111,5 +111,3 @@ int _putsfd(char *str, int fd)
     return (i);
 }
 ```
-
-In summary, `eoutput.c` facilitates enhanced output to `stderr` in the Simple Shell program. The functions `_eputs`, `_eputchar`, `_putfd`, and `_putsfd` collectively optimize character output operations, providing efficiency and flexibility in handling errors and user feedback within the shell.

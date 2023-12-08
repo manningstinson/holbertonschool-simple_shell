@@ -141,5 +141,3 @@ int _myalias(info_t *info)
     return 0;
 }
 ```
-
-Feel free to use this updated content in your README.md, and adjust it as needed based on your project's specific details.

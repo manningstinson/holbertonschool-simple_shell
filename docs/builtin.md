@@ -1,4 +1,4 @@
-# builtin
+# builtin.c
 These functions collectively contribute to the basic functionality of a shell, including the ability to exit, navigate directories, and potentially obtain help on command usage. In a simple shell project, these functions form essential building blocks for user interaction and control over the shell's behavior.
 
 ```c

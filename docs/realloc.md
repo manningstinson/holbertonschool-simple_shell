@@ -76,5 +76,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
     return (p);
 }
 ```
-The `_realloc` function dynamically reallocates memory, allowing for the resizing of memory blocks. It takes three parameters: the pointer to the previous dynamically allocated block (`ptr`), the byte size of the previous block (`old_size`), and the desired byte size of the new block (`new_size`). The function first handles special cases, such as allocating new memory if the original pointer is `NULL` or freeing the pointer if the new size is zero. It then allocates a new memory block, copies the necessary data from the old block, and frees the original block. This function is crucial for adapting memory allocations during program execution, optimizing memory usage.
+The `_realloc` function dynamically reallocates memory, allowing for the resizing of memory blocks. It takes three parameters: the pointer to the previous dynamically allocated block (`ptr`), the byte size of the previous block (`old_size`), and the desired byte size of the new block (`new_size`). 
+
+The function first handles special cases, such as allocating new memory if the original pointer is `NULL` or freeing the pointer if the new size is zero. It then allocates a new memory block, copies the necessary data from the old block, and frees the original block. This function is crucial for adapting memory allocations during program execution, optimizing memory usage.
 

@@ -1,4 +1,4 @@
-# string_functions.c
+# exits.c
 In summary, `string_functions.c` provides crucial string manipulation functionalities for the Simple Shell program. The functions `_strncpy`, `_strncat`, and `_strchr` contribute to the overall capability of the shell to process and manipulate strings, supporting various operations within the shell environment.
 
 ## \_strncpy Function

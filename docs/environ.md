@@ -122,5 +122,3 @@ int populate_env_list(info_t *info)
     return (0);
 }
 ```
-
-These functions collectively provide essential functionality for managing and interacting with environment variables in the Simple Shell project.

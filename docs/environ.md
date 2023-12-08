@@ -1,5 +1,3 @@
-Certainly! Here's the README.md with the full code in each code block:
-
 # environ.c
 
 This file, `environ.c`, plays a crucial role in the Simple Shell project. It contains functions related to environment variables. Let's break down each function:

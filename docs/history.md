@@ -1,4 +1,5 @@
 # history.c
+These functions collectively handle reading from and writing to a history file, managing the history linked list, and ensuring the integrity of the command history in a simple shell program.
 
 ### `get_history_file`
 
@@ -186,5 +187,3 @@ int renumber_history(info_t *info) {
     return (info->histcount = i);
 }
 ```
-
-These functions collectively handle reading from and writing to a history file, managing the history linked list, and ensuring the integrity of the command history in a simple shell program.

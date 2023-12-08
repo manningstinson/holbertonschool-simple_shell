@@ -1,4 +1,5 @@
 # shell_loop.c
+The file `shell_loop.c` contains the main loop and related functions for the custom shell. It defines the core loop (`hsh` function) where the shell continuously prompts for user input, processes commands, and executes them. Additionally, the file includes functions to find and execute built-in commands, locate external commands in the system's PATH directories, and fork a child process to execute external commands. The shell loop continues until an exit command is entered or an error occurs, providing a basic interactive shell environment.
 
 ```c
 #include "shell.h"

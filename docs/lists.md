@@ -1,6 +1,5 @@
 # lists.c
-
-This file, **lists.c**, contains functions for managing linked lists in the shell program. Below is a detailed explanation of each function:
+These functions collectively provide the functionality to manipulate linked lists, including adding nodes to the beginning and end, printing the content of the list, deleting a node at a specific index, and freeing the entire list.
 
 ### `add_node` Function
 
@@ -189,6 +188,4 @@ void free_list(list_t **head_ptr) {
 
     *head_ptr = NULL;
 }
-```
-
-These functions collectively provide the functionality to manipulate linked lists, including adding nodes to the beginning and end, printing the content of the list, deleting a node at a specific index, and freeing the entire list.
+``

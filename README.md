@@ -20,8 +20,30 @@ Clone this project with the SSH path below:
 README.md docs have been created for each file, and are available in the folder called 
 [Code Explanations](https://github.com/manningstinson/holbertonschool-simple_shell/tree/main/code-explanations)
 
-
-
+## File Included
+`_atoi.c`
+`builtin.c`
+`builtinc.c`
+`environ.c`
+`errors.c`
+`error1.c`
+`exits.c`
+`getenv.c`
+`getinfo.c`
+`getline.c`
+`history.c`
+`lists.c`
+`lists1.c`
+`main.c`
+`main_1_simple_shell`
+`memory`
+`parser.c`
+`realloc.c`
+`shell.h`
+`string.c`
+`string1.c`
+`tokenizer.c`
+`vars.c`
 
 
 

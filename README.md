@@ -31,7 +31,7 @@ These functions collectively contribute to the basic functionality of a shell, i
 The file provides essential functions for a basic shell, including command history display, alias management (add/update/remove), and core features for history tracking.<br>
 
 `environ.c`
-`environ.c` in Simple Shell: Vital for environment variable management, it facilitates viewing, setting, modifying, and removing variables. `populate_env_list` establishes the initial system state.
+In Simple Shell: Vital for environment variable management, it facilitates viewing, setting, modifying, and removing variables. `populate_env_list` establishes the initial system state.
 
 `errors.c`
 `error1.c`

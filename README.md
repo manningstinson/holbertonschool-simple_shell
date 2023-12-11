@@ -15,7 +15,10 @@ You can either `fork` this project or clone this project with the SSH path below
 `git@github.com:manningstinson/holbertonschool-simple_shell.git`
 
 ## Cod Explanations
-README.md docs have been created for each file, and are available in the folder called `code-explanations`.  
+README.md docs have been created for each file, and are available in the folder called 
+[Code Explanations](https://github.com/manningstinson/holbertonschool-simple_shell/tree/main/code-explanations)
+
+
 
 
 

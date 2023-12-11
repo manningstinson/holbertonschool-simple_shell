@@ -10,6 +10,7 @@ This project was a a collaborative effort between the below authors. You can vis
 ## About the simple shell project
 This project was to create a linux simple shell. 
 
+## How to clone this project
 
 
 

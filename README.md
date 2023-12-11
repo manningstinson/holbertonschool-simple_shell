@@ -8,11 +8,15 @@ This project was a a collaborative effort between the below authors. You can vis
 [Brandon Montezuma](https://github.com/bmontezuma)
 
 ## About the simple shell project
-This project was to create a linux simple shell. 
+This project was to create a linux simple shell, as required by trimester one students. 
 
 ## How to clone this project
 You can either `fork` this project or clone this project with the SSH path below
 `git@github.com:manningstinson/holbertonschool-simple_shell.git`
+
+## Cod Explanations
+README.md docs have been created for each file, and are available in the folder called `code-explanations`.  
+
 
 
 

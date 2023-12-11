@@ -10,9 +10,8 @@ This project was a a collaborative effort between the below authors. You can vis
 ## About the simple shell project
 This project was to create a linux simple shell, as required by trimester one students.
 
-List of allowed functions
-
 List of allowed functions and system calls+
+
 `all functions from string.h`
 `access` 
 `chdir` 

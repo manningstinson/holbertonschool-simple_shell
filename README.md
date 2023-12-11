@@ -11,7 +11,9 @@ This project was a a collaborative effort between the below authors. You can vis
 This project was to create a linux simple shell, as required by trimester one students. 
 
 ## How to clone this project
-You can either `fork` this project or clone this project with the SSH path below
+To `fork` this project on github, use the FORK option github.com
+
+Clone this project with the SSH path below
 `git@github.com:manningstinson/holbertonschool-simple_shell.git`
 
 ## Cod Explanations

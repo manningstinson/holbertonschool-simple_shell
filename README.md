@@ -21,7 +21,9 @@ README.md docs have been created for each file, and are available in the folder 
 [Code Explanations](https://github.com/manningstinson/holbertonschool-simple_shell/tree/main/code-explanations)
 
 ## File Included
-`_atoi.c`
+`_atoi.c` <br>
+This file (_atoi.c) contains utility functions crucial for a simple shell project. <br> <br>
+
 `builtin.c`
 `builtinc.c`
 `environ.c`

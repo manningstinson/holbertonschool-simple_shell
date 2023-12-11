@@ -10,6 +10,12 @@ This project was a a collaborative effort between the below authors. You can vis
 ## About the simple shell project
 This project was to create a linux simple shell, as required by trimester one students.
 
+## How to clone this project
+To `fork` this project on github, use the FORK option.
+
+Clone this project with the SSH path below:
+`git@github.com:manningstinson/holbertonschool-simple_shell.git`
+
 ## List of allowed functions and system calls+
 
 `all functions from string.h`
@@ -48,12 +54,6 @@ This project was to create a linux simple shell, as required by trimester one st
 `wait3` 
 `wait4`
 `write`
-
-## How to clone this project
-To `fork` this project on github, use the FORK option.
-
-Clone this project with the SSH path below:
-`git@github.com:manningstinson/holbertonschool-simple_shell.git`
 
 ## Code Explanations
 README.md docs have been created for each file, and are available in the folder called 

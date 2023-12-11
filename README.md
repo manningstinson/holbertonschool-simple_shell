@@ -16,7 +16,7 @@ To `fork` this project on github, use the FORK option.
 Clone this project with the SSH path below:
 `git@github.com:manningstinson/holbertonschool-simple_shell.git`
 
-## Cod Explanations
+## Code Explanations
 README.md docs have been created for each file, and are available in the folder called 
 [Code Explanations](https://github.com/manningstinson/holbertonschool-simple_shell/tree/main/code-explanations)
 

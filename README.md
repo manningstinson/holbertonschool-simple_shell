@@ -86,5 +86,8 @@ README.md docs have been created for each file, and are available in the folder 
 `tokenizer.c`
 `vars.c`
 
+## Cecision Tree
+This flowchart/decision tree gives a  breakdown of the given shell execution process in a flowchart format. Included are flows for error handing, non built in commands, and subshell commands.
 
-
+You can access the flowchart/decision tree here:
+[Decision Tree/Flowchart](https://github.com/manningstinson/holbertonschool-simple_shell/blob/main/simple-shell-decision-tree.md)

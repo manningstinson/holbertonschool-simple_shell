@@ -13,7 +13,7 @@ This project was to create a linux simple shell, as required by trimester one st
 ## How to clone this project
 To `fork` this project on github, use the FORK option.
 
-Clone this project with the SSH path below:
+Clone this project with the SSH path below:<br>
 `git@github.com:manningstinson/holbertonschool-simple_shell.git`
 
 ## List of allowed functions and system calls+
